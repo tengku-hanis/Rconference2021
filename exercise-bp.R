@@ -4,7 +4,7 @@
 # Date: 06-11-2021
 #========================================================================#
 
-# Section 1: Basic meta-analysis ------------------------------------------
+# SECTION 1: Basic meta-analysis ------------------------------------------
 
 # Install packages
 install.packages("meta")
@@ -67,7 +67,7 @@ plot(ma_inf, "I2")
 plot(ma_inf, "influence") #a bit advanced
 
 
-# Section2: Publication bias ----------------------------------------------
+# SECTION 2: Publication bias ----------------------------------------------
 # For significant publication bias (our model not significant)
 
 # Trim and fill method (I^2 should be low) ----
@@ -77,7 +77,7 @@ tf
 funnel(tf, studlab = T)
 
 
-# Section 3: Heterogeneity ------------------------------------------------
+# SECTION 3: Heterogeneity ------------------------------------------------
 # To explain high heterogeneity 
 
 # Subgroup analysis (k > 10) ----
@@ -98,7 +98,7 @@ exp(ma_iver_reg$beta) #effect estimate of age group >65 is 10% or 1.1 lower than
 bubble(ma_irt_reg, lwd = 2, lty = 2, col.line = "red", ylim = c(-3, 2), regline = TRUE)
 
 
-# Miscellanous ------------------------------------------------------------
+# MISCELLANOUS ------------------------------------------------------------
 
 # Risk of bias ----
 library(robvis)
@@ -120,7 +120,7 @@ rob_summary(bias, tool = "ROB1", overall = T, weighted = F)
 # Shinyapps - https://estech.shinyapps.io/prisma_flowdiagram/
 # Not R - http://prisma-statement.org/prismastatement/flowdiagram.aspx
 
-# Resources ---------------------------------------------------------------
+# RESOURCES ---------------------------------------------------------------
 
 # https://www.medrxiv.org/content/10.1101/2021.04.30.21256415v2.full-text
 # https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/
