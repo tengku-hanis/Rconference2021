@@ -92,7 +92,7 @@ ma_irt_reg <- metareg(ma_irt_RE, ~ age_gp,
                        intercept = T) 
 
 ma_irt_reg 
-exp(ma_iver_reg$beta) #effect estimate of age group >65 is 10% or 1.1 lower than the <65
+exp(ma_irt_reg$beta) #effect estimate of age group >65 is 10% or 1.1 lower than the <65
 
 ## Bubble plot of meta-regression
 bubble(ma_irt_reg, lwd = 2, lty = 2, col.line = "red", ylim = c(-3, 2), regline = TRUE)
