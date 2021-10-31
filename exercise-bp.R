@@ -107,9 +107,7 @@ library(robvis)
 rob_tools()
 
 ## Risk of bias data (clinical only)
-bias <- 
-  read.csv("irt_rob.csv", row.names = NULL) %>%
-  select(-X)
+bias <- read.csv("https://raw.githubusercontent.com/tengku-hanis/Rconference2021/main/irt_rob.csv")
 bias$Weight <- 1
 
 ## Plot
