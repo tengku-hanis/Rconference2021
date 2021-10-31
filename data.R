@@ -1,4 +1,4 @@
-dat <- read.table(header = T, text = "
+irt <- read.table(header = T, text = "
 studyID n.e mean.e sd.e n.c mean.c sd.c
 Goessler,2018 22 5.5 8.46 16 1 6.94
 Ogbutor,2019 200 -7.47 1.69 200 -4.07 2.61
