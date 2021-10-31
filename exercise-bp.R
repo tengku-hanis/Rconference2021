@@ -49,7 +49,7 @@ forest(ma_irt_RE, sortvar = TE)
 funnel(ma_irt_RE, studlab = T, xlim = c(-3.5, 1.5))
 
 # Publication bias ----
-metabias(ma_irt_RE, plotit = T, method.bias = "Egger") #generic
+metabias(ma_irt_RE, plotit = T, method.bias = "Egger") #generic, increase false positive dt hedges' g
 metabias(ma_irt_RE, plotit = T, method.bias = "Begg") #generic
 metabias(ma_irt_RE, plotit = T, method.bias = "Pustejovsky") #specific for cont outcome
 
