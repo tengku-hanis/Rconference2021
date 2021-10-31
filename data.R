@@ -1,3 +1,4 @@
+# Isometric resistance training effect on blood pressure
 irt <- read.table(header = T, text = "
 studyID n.e mean.e sd.e n.c mean.c sd.c
 Goessler,2018 22 5.5 8.46 16 1 6.94
@@ -28,3 +29,6 @@ Herrod,2020 11 -9 9 12 -1 6
 Punia,2020 20 -5.75 3.96 20 3 2.96
 Wiley,1992 8 -12.7 2.73 7 2.6 7.45
 ")
+
+# Add age group
+irt$age_gp <- c(rep(">65", 8), rep("<65", 19))
