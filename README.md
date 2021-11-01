@@ -1,8 +1,8 @@
 # Pre-conference workshop (R confeRence 2021)
 
-Date: 06-11-2021
-Time: 2.00 4.00 pm
-Venue: Webex (virtual)
+Date: 06-11-2021   
+Time: 2.00 4.00 pm   
+Venue: Webex (virtual)   
 
 This repo contains:
 
