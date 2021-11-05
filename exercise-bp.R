@@ -43,7 +43,7 @@ ma_irt
 ma_irt_RE <- update(ma_irt, fixed = F)
 
 # Forest plot ----
-forest(ma_irt_RE, sortvar = TE)
+forest(ma_irt_RE, sortvar = TE, label.left = "Favour IRT", label.right = "Favour control")
 
 # Funnel plot ----
 funnel(ma_irt_RE, studlab = T, xlim = c(-3.5, 1.5))
@@ -84,18 +84,20 @@ funnel(tf, studlab = T)
 ma_sub <- update(ma_irt_RE, subgroup = age_gp)
 ma_sub
 
-forest(ma_sub, sortvar = TE, bylab = "Age group")
+forest(ma_sub, sortvar = TE, bylab = "Age group", label.left = "Favour IRT", label.right = "Favour control")
 
 # Meta-regression (~ k > 10) ----
 ma_irt_reg <- metareg(ma_irt_RE, ~ age_gp, 
                        hakn = T, 
                        intercept = T) 
 
-ma_irt_reg #effect estimate of age group >65 is expected to decrease by 0.1 compared to the <65 group
+ma_irt_reg #effect estimate of age group >65 is expected to reduce by 0.1 compared to the <65 group
 
 ## Bubble plot of meta-regression
-bubble(ma_irt_reg, lwd = 2, lty = 2, col.line = "red", ylim = c(-3, 2), regline = TRUE)
-
+bubble(ma_irt_reg, lwd = 2, lty = 2, col.line = "red", ylim = c(-3, 2), regline = TRUE, 
+       main = "Bubble plot of age group")
+mtext(line = 0.25, font = 3, 
+      "(The treatment is effective as as the mean difference moves towards negative value)")
 
 # MISCELLANOUS ------------------------------------------------------------
 
