@@ -31,7 +31,7 @@ ma_irt <- metacont(n.e = n.e,
                    studlab = studyID,
                    data = irt,
                    method.tau = "REML", #estimator
-                   sm = "SMD",
+                   sm = "SMD", #by default hedges' g
                    fixed = T, 
                    random = T,
                    prediction = T, 
@@ -91,8 +91,7 @@ ma_irt_reg <- metareg(ma_irt_RE, ~ age_gp,
                        hakn = T, 
                        intercept = T) 
 
-ma_irt_reg 
-exp(ma_irt_reg$beta) #effect estimate of age group >65 is 10% or 1.1 lower than the <65
+ma_irt_reg #effect estimate of age group >65 is expected to decrease by 0.1 compared to the <65 group
 
 ## Bubble plot of meta-regression
 bubble(ma_irt_reg, lwd = 2, lty = 2, col.line = "red", ylim = c(-3, 2), regline = TRUE)
