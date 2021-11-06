@@ -1,5 +1,6 @@
 # Pre-conference workshop (R confeRence 2021)
 
+Workshop: An introduction to meta-analysis in R    
 Date: 06-11-2021   
 Time: 2.00 4.00 pm   
 Venue: Webex (virtual)   
