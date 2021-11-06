@@ -94,10 +94,10 @@ ma_irt_reg <- metareg(ma_irt_RE, ~ age_gp,
 ma_irt_reg #effect estimate of age group >65 is expected to reduce by 0.1 compared to the <65 group
 
 ## Bubble plot of meta-regression
-bubble(ma_irt_reg, lwd = 2, lty = 2, col.line = "red", ylim = c(-3, 2), regline = TRUE, 
+bubble(ma_irt_reg, lwd = 2, lty = 2, col.line = "red", ylim = c(-3.5, 2), regline = TRUE, 
        main = "Bubble plot of age group")
 mtext(line = 0.25, font = 3, 
-      "(The treatment is effective as as the mean difference moves towards negative value)")
+      "(The treatment is effective as the mean difference moves towards negative value)")
 
 # MISCELLANOUS ------------------------------------------------------------
 
@@ -112,7 +112,7 @@ bias <- read.csv("https://raw.githubusercontent.com/tengku-hanis/Rconference2021
 bias$Weight <- 1
 
 ## Plot
-rob_traffic_light(bias, tool = "ROB1", psize = 13)
+rob_traffic_light(bias, tool = "ROB1", psize = 10)
 
 rob_summary(bias, tool = "ROB1", overall = T, weighted = F)
 
@@ -123,7 +123,6 @@ rob_summary(bias, tool = "ROB1", overall = T, weighted = F)
 
 # RESOURCES ---------------------------------------------------------------
 
-# https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/
 # https://www.metafor-project.org/  
 # https://mcguinlu.shinyapps.io/robvis/
 # Rtools or Xcode - https://clanfear.github.io/CSSS508/docs/compiling.html
